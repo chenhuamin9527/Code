@@ -1,0 +1,2 @@
+#pragma code_page(65001)
+1 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "F:/Code/C++/Lab9_3/out/build/x64-Debug (默认值)/CMakeFiles/Lab9_3.dir/embed.manifest"
