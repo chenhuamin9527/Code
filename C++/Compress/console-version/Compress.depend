@@ -1,0 +1,40 @@
+# depslib dependency file v1.0
+1544939565 source:d:\software engineer\compress\main.cpp
+	<iostream>
+	"Compress.h"
+	"Unpack.h"
+
+1544941029 source:d:\software engineer\compress\src\huffman.cpp
+	"Huffman.h"
+
+1544940879 d:\software engineer\compress\include\huffman.h
+	<iostream>
+	<cstring>
+	<string>
+
+1545130359 source:d:\software engineer\compress\src\compress.cpp
+	"Compress.h"
+	<iostream>
+
+1545130302 d:\software engineer\compress\include\compress.h
+	"Huffman.h"
+	<fstream>
+	<assert.h>
+	<cstring>
+	<string>
+	<cmath>
+	<cstdio>
+	<cstdlib>
+
+1545131323 source:d:\software engineer\compress\src\unpack.cpp
+	"Unpack.h"
+	<iostream>
+
+1545130815 d:\software engineer\compress\include\unpack.h
+	"Huffman.h"
+	<fstream>
+	<assert.h>
+	<cstring>
+	<cstdio>
+	<cstdlib>
+

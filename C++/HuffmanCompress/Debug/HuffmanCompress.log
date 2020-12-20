@@ -1,0 +1,8 @@
+﻿  Huffman.cpp
+F:\Code\C++\huffman-compress\Huffman.cpp(250,33): warning C4244: “=”: 从“unsigned __int64”转换到“int”，可能丢失数据
+F:\Code\C++\huffman-compress\Huffman.cpp(375,24): warning C4244: “初始化”: 从“unsigned long”转换到“unsigned char”，可能丢失数据
+F:\Code\C++\huffman-compress\Huffman.cpp(394,58): warning C4244: “初始化”: 从“unsigned __int64”转换到“unsigned int”，可能丢失数据
+F:\Code\C++\huffman-compress\Huffman.cpp(400,24): warning C4244: “初始化”: 从“unsigned long”转换到“unsigned char”，可能丢失数据
+  pch.cpp
+  正在生成代码...
+  HuffmanCompress.vcxproj -> F:\Code\C++\HuffmanCompress\Debug\HuffmanCompress.exe

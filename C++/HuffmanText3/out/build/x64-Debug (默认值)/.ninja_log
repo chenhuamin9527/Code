@@ -1,0 +1,5 @@
+# ninja log v5
+0	979	630161203	CMakeFiles/HuffmanText3.dir/Huffman.cpp.obj	3482830001aa1118
+209	981	630161203	CMakeFiles/HuffmanText3.dir/Compress.cpp.obj	57e347eb3b978478
+109	983	630161203	CMakeFiles/HuffmanText3.dir/HuffmanText3.cpp.obj	c6ee0f39debb634c
+983	1980	630161204	HuffmanText3.exe	87dc203dfc727318

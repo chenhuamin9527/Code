@@ -1,0 +1,2 @@
+F:\Code\C++\Huffman\Debug\Huffman.exe
+F:\Code\C++\Huffman\Debug\Huffman.pdb

@@ -7,7 +7,7 @@ using namespace std;
 
 int main() {
 	int choice;
-	char path[50];
+	char path[150];
 	cout << "/********** 欢迎使用基于Huffman编码的文件压缩与解压 **********/" << endl;
 	while (true) {
 		cout << "压缩文件 [1]" << endl;
@@ -25,19 +25,20 @@ int main() {
 		switch (choice) {
 		case 1:
 			cout << "输入待压缩文件路径 > ";
-			cin.get(path, 50);
-			compressFile(path, "F:/testCode.bin", "F:/testCompress.txt");
+			cin.get(path, 150);
+			compressFile(path, "F:/testFile/testCode.bin", "F:/testFile/Compress.txt");
 			break;
 		case 2:
 			cout << "输入待解压文件路径 > ";
-			cin.get(path, 50);
-			uncompressFile(path, "F:/testCode.bin", "F:/testUncompress.txt");
+			cin.get(path, 150);
+			uncompressFile(path, "F:/testFile/testCode.bin", "F:/testFile/Uncompress.txt");
 			break;
 		case 3:
 			system("pause");
 			return 0;
 		default:
 			cout << "路径错误！" << endl;
+			return 1;
 			break;
 		}
 		cout << endl;

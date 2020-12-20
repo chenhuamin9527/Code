@@ -1,0 +1,2 @@
+F:\Code\C++\HuffmanCompress\Debug\HuffmanCompress.exe
+F:\Code\C++\HuffmanCompress\Debug\HuffmanCompress.pdb

@@ -1,0 +1,757 @@
+首页
+会员
+发现
+等你来答
+有没有「沙雕」女主的文推荐
+​
+提问
+​63
+​32
+
+Python有哪些杀手级超厉害框架或库或应用？
+关注问题​写回答
+Python
+Python 框架
+Python有哪些杀手级超厉害框架或库或应用？
+
+关注者
+1,703
+被浏览
+170,490
+zdr0 也关注了该问题zdr0
+关注问题​写回答
+​邀请回答
+​好问题 90
+​添加评论
+​分享
+​
+查看全部 40 个回答
+Charles
+Charles
+白露未晞
+646 人赞同了该回答
+我来不要脸地推荐一下自己的库吧。。。最近维护比较勤快的应该只有DecryptLogin和musicdl这两个库了。。。
+
+DecryptLogin
+项目地址：https://github.com/CharlesPikachu/DecryptLogin
+
+项目文档：DecryptLogin中文文档 - DecryptLogin 0.2.0 文档
+
+DecryptLogin是一个专注于解决网站模拟登录问题的python开源库，安装它之后：
+
+pip install DecryptLogin --upgrade
+你只需要写简单的几行代码就可以模拟登录任意一个该模块支持的网站，例如利用python来模拟登录知乎，你只需要这样：
+
+from DecryptLogin import login
+
+lg = login.Login()
+infos_return, session = lg.zhihu(username=邮箱, passward=密码, mode='pc')
+效果大概是这样子的：
+
+
+获得了模拟登录后的session，你就可以愉快地爬取很多非登录状态无法获取到的数据啦～
+
+是不是很方便呢～
+
+DecryptLogin目前支持利用requests模块进行以下平台的模拟登录操作：
+
+
+项目链接里还有一些利用该库实现的爬虫小例子，个人感觉还是蛮适合新手练习使用的：
+
+
+musicdl
+项目地址：https://github.com/CharlesPikachu/musicdl
+
+项目文档：musicdl中文文档 - musicdl 2.1.0 文档
+
+musicdl是一款轻量级的音乐下载器，目前支持的音乐源如下：
+
+
+你只需要简单安装一下：
+
+pip install musicdl
+然后写几行代码：
+
+from musicdl import musicdl
+
+config = {'logfilepath': 'musicdl.log', 'savedir': 'downloaded', 'search_size_per_source': 5, 'proxies': {}}
+target_srcs = [
+    'baiduFlac', 'kugou', 'kuwo', 'qq', 'qianqian', 
+    'netease', 'migu', 'xiami', 'joox', 'yiting',
+]
+client = musicdl.musicdl(config=config)
+client.run(target_srcs)
+就可以轻松地下载自己喜欢的音乐啦（只能下载免费的歌曲哦～代码仅供大家学习使用～）：
+
+
+更多的使用方式请自行参考项目文档～
+
+Games
+项目地址：https://github.com/CharlesPikachu/Games
+
+里面主要是我无聊的时候写的一些小游戏，例如坦克大战啦：
+
+坦克大战-pygame
+推箱子啦：
+
+推箱子小游戏
+一共大概有几十个小游戏吧：
+
+
+Tools
+项目地址：https://github.com/CharlesPikachu/Tools
+
+里面主要是一些python写的小玩意：
+
+
+sssegemention
+最近搞了一段时间图像分割，随手开发了个通用分割库：
+
+https://github.com/SegmentationBLWX/sssegmentation
+
+感兴趣的小伙伴可以follow一下，里面复现的分割算法性能基本上超过所有目前类似的开源库。
+
+目前支持的算法不算多：
+
+
+后面会慢慢加一些个人感觉还不错的算法进去。也欢迎大佬PR
+
+我们来横向对比一下mmsegmentation吧，随便举两个算法。
+
+1. Deeplabv3plus
+
+ours(注意，因为我比较懒，所以只汇报了sing-scale testing的结果，事实上sssegmentation也是支持ms+flip的)：
+
+
+mmseg：
+
+
+2. upernet
+
+ours：
+
+
+mmseg：
+
+
+可以发现在类似的setting下性能基本是高于mmseg的（注意，虽然我的aux dim=512，但是事实上性能比mmseg的原因是他的ce loss算错了）。
+
+最后，欢迎微信搜索关注：Charles的皮卡丘
+
+编辑于 12-11
+真诚赞赏，手留余香
+赞赏
+还没有人赞赏，快来当第一个赞赏的人吧！
+​赞同 646​
+​28 条评论
+​分享
+​收藏
+​喜欢
+​
+收起​
+继续浏览内容
+
+知乎
+发现更大的世界
+打开
+
+Chrome
+继续
+更多回答
+七步编程
+七步编程
+公众号【七步编程】，回复「567」，获取精选技术干货合集！
+264 人赞同了该回答
+9款杀手级超牛框架/库，第5款最令我惊艳！
+
+Python是一门简洁、优美且强大的编程语言，它的强大，很大一部分原因来自于丰富的第三方工具包。
+
+​通过这些第三方工具包，它可以轻松应对机器学习、数据分析、前端、后端等不同种类的需求和工具，这使得它的应用范围几乎覆盖了当前各大主流方向。
+
+就如同前面所说，它的强大，离不开丰富的第三方工具包，pandas、TensorFlow、matplotlib等，这些完善的工具包，让它不仅可以用于模型训练、数据处理，还可以用于开发游戏、数据可视化。
+
+本文，就来给大家介绍9款超级好用的Python工具包。其中，第5款彻底解决了数据分析一大痛点！
+
+专注Python、AI、大数据 
+@七步编程
+pyinspect
+
+
+
+在大一些的项目开发过程中，会写很多实现不同功能的函数，久而久之，很多函数的名称都记不太清。
+
+pyinspect[1]可以给你提供强有力的帮助！
+
+你不仅可以在Python代码中像调用函数一样使用它，也可以在命令行下像命令行工具那样使用pyinspect。
+
+pyinspect允许根据函数和类方法的名称搜索它们，并打印出一个清晰的列表，其中包含满足搜索条件的所有函数。你还可以使用pyinspect在终端中直接打印函数的代码，这样就可以在不打开任何文件的情况下提示它所做的工作。
+
+jazzit
+如果你的代码在支撑过程中报错了，你该怎么能够感知到这个错误？
+
+当我们执行一个运行时间较长的工程时，不可能一直盯着屏幕，直到它运行完成。
+
+但是，如果这期间它出现了错误，我们却没有感知，这样势必会浪费掉大量时间。
+
+jazzit[2]可以你的代码再运行/出错时播放对应的声音，以此来给你对应的提醒。
+
+安装
+
+$ pip install jazzit
+示例
+
+from jazzit import error_track
+
+@error_track("curb_your_enthusiasm.mp3", wait=7)
+def run():
+    for num in reversed(range(10)):
+        print(10/num)
+
+if __name__ == "__main__":
+    run()
+这样，你就可以对你的代码运行情况有更加直观的感知！
+
+mach-nix
+
+目前Python包/环境管理工具可以说是有非常多的选择，pip、pipenv、conda等。
+
+但是，现有的Python软件包管理工具都无法实现可复用性，而且需要额外的虚拟化层。
+
+而mach-nix旨在通过提供一种简单的使用Nix的方式来解决这些问题。
+
+Nix是一款操作系统包管理工具，和RPM、APT一样。
+
+通过与Nix的结合，mach-nix使得创建和共享Python环境变得更加容易，大大提升了它的可复用性和可移植性。
+
+安装
+
+可以通过pip进行安装：
+
+$ pip install git+git://github.com/DavHau/mach-nix@3.0.1
+
+也可以通过nix进行安装：
+
+$ nix-env -if https://github.com/DavHau/mach-nix/tarball/3.0.1 -A mach-nix
+
+下面，来看一下用mach-nix通过requirements.txt创建Python环境的示例：
+
+$ mach-nix env ./env -r requirements.txt
+
+Papis
+
+Papis是一个功能强大且高度可扩展的基于命令行的文档和书目管理工具。
+
+它可以从Dropbox、rsync、OwnCloud、GoogleDrive等主流网盘进行文档同步。也支持与其他同事进行共享文档，便于团队协作。
+
+Papis还支持文档导出，可以导出bibtex、yaml等格式。
+
+在兼容方面，Papis做的也很好。它可以使用papis-zotero和Zotero这款强大且开源的文献管理工具进行结合使用。
+
+示例
+
+首先，安装papis：
+
+$ pip install papis
+
+其次，下载2份示例PDF文档：
+
+$ wget http://www.gnu.org/s/libc/manual/pdf/libc.pdf
+$ wget http://www.ams.org/notices/201304/rnoti-p434.pdf
+然后，把这2份文档加入到库中，方便管理：
+
+$ papis add libc.pdf --set author "Sandra Loosemore" --set title "GNU C reference manual" --set year 2018 --set tags programming --confirm
+# Get paper information automatically via de DOI
+$ papis add --from doi 10.1090/noti963 --set tags programming rnoti-p434.pdf
+
+最后，可以通过papis进行编辑和导出：
+
+$ papis open
+$ papis edit
+$ apis export --all --bibtex > mylib.bib
+
+PandasGUI
+
+学习Python数据分析，有2个工具包一定会被用到，分别是numpy和pandas。
+
+pandas可以说是Python数据分析中的神器，它可以在Python语言中实现很多SQL语句的功能。而且，还具备很多数据清洗和处理的附加功能。
+
+但是，对比于很多数据库工具，它有一点不好的地方就是，它在可视化方面做的很差。
+
+而PandasGUI的出现，让我大为经验，它能够直接把pandas的DataFrames进行可视化，让我们数据分析过程中对数据有一个更加清晰的认知。
+
+安装
+
+$ pip install pandasgui
+或
+$ pip install git+https://github.com/adamerose/pandasgui.git
+用法
+
+首先，创建一个简单的DataFrames：
+
+import pandas as pd
+from pandasgui import show
+df = pd.DataFrame(([[1, 2, 3], [4, 5, 6], [7, 8, 9]]), columns=['a', 'b', 'c'])
+show(df)
+如果你将代码作为脚本而不是在IPython或Jupyter中运行，则需要这样做：
+
+show(df, settings={'block': True})
+Pippi
+从事计算机视觉，能够找到很多和图像处理相关的Python库。从事自然语言处理，NLP相关的工具包也是层出不穷。
+
+而音乐作为一种常见的多媒体形式，却鲜有相关的Python工具包。
+
+如果你想通过代码处理一段音乐，然后对它进行控制和调整，就会不知所措、无从下手。
+
+Pippi[3]就可以满足你的这个需求，它是一款用于Python的音乐处理库，它包含了一些方便的音乐数据结构，如SoundBuffer和Wavetable，使得处理音乐变得非常简单。除此之外，它还可以对音乐格式进行转换。
+
+from pippi import dsp
+
+sound1 = dsp.read('sound1.wav')
+sound2 = dsp.read('sound2.flac')
+
+# Mix two sounds
+both = sound1 & sound2
+
+# Apply a skewed hann Wavetable as an envelope to a sound
+enveloped = sound * dsp.win('hann').skewed(0.6)
+
+# Or just a sine envelope via a shortcut method on the `SoundBuffer`
+enveloped = sound.env('sine')
+
+# Synthesize a 10 second graincloud from the sound, 
+# with grain length modulating between 20ms and 2s 
+# over a triangle shaped curve.
+cloudy = enveloped.cloud(10, grainlength=dsp.win('tri', dsp.MS*20, 2))
+pylambdarest
+当让你用Python写一个REST API接口时，大概率会想到Flask。
+
+而pylambdarest[4]是Flask之外一个非常不错的选择。
+
+它是一款轻量级的框架，用于使用AWS Lambda + API网关构建REST API。
+
+与大多数其他Python框架不同，它不提供任何路由功能，路由由API网关本身处理。
+
+下面通过一个示例来对于pylambdarest与其他工具包的不同之处，
+
+其他工具包
+
+import json
+
+def handler(event, context):
+    body = json.loads(event["body"])
+    query_params = event["queryStringParameters"]
+    path_params = event["pathParameters"]
+
+    return {
+        "statusCode": 200,
+        "body": json.dumps({
+            "message": f"Hello from AWS Lambda {body['name']}!!"
+        })
+    }
+pylambdarest
+
+from pylambdarest import route
+
+@route()
+def handler(request):
+    body = request.json
+    query_params = request.query_params
+    path_params = request.path_params
+
+    return200, {"message": f"Hello from AWS Lambda {body['name']}!!"}
+当使用API网关和python Lambdas时，最常见的模式是由代理API网关资源触发一个唯一的Lambda。Lambda然后使用类似于Flask的框架来完成所有的路由。在API Gateway + Lambda上下文中，作者认为路由应该由API Gateway本身处理，然后将请求转发给针对每个资源或endoint的特定Lambda函数。
+
+Fixit
+Fixit[5]是一个对Flake8进行补充的lint框架。它基于LibCST，这使得提供自动修复成为可能。通过模式匹配、测试工具包和实用工具助手(例如范围分析)，可以很容易地构建Lint规则。它是优化的效率，易于定制。
+
+安装
+
+$ pip install fixit
+通过配置fixit规则，可以对Python代码进行静态检查，能够有效的提升Python代码的质量。
+
+isort
+Python是一门对语法要求相对宽松的编程语言，因此对于很多Python初学者来说这门语言非常简单。
+
+但是，Python中有很多约定成俗的规则，通过这个规则的约束和遵从，能够提升Python代码的可读性，降低维护成本。
+
+以Python代码中的import为例，就有一定的规则，内置模块、自定义模块、第三方模块的导入都是有一定顺序的。
+
+isort[6]就是针对Python中import部分自动规范化的工具包，通过使用isort，可以迅速按照规则调整模块导入部分。
+
+使用isort之前：
+
+from my_lib import Object
+
+import os
+
+from my_lib import Object3
+
+from my_lib import Object2
+
+import sys
+
+from third_party import lib15, lib1, lib2, lib3, lib4, lib5, lib6, lib7, lib8, lib9, lib10, lib11, lib12, lib13, lib14
+
+import sys
+
+from __future__ import absolute_import
+
+from third_party import lib3
+
+print("Hey")
+print("yo")
+
+使用isort之后：
+
+from __future__ import absolute_import
+
+import os
+import sys
+
+from third_party import (lib1, lib2, lib3, lib4, lib5, lib6, lib7, lib8,
+                         lib9, lib10, lib11, lib12, lib13, lib14, lib15)
+
+from my_lib import Object, Object2, Object3
+
+print("Hey")
+print("yo")
+
+结语
+目前，Python已经拥有数不清的第三方工具包。其中，不乏一些非常强大且好用的。
+
+或许，当我们在开发过程中面临一个难题，需要花费很多功夫，开发大量代码才能完成的工作，使用第三方工具包只需要短暂的几行代码就可以解决。
+
+因此，应该善于利用这些好用的工具包，它不仅能够节省时间，提升工作效率，还能够提供很多实用的辅助功能。
+
+参考资料
+[1] pyinspect: https://github.com/FedeClaudi/pyinspect
+
+[2] jazzit: https://github.com/sangarshanan/jazzit
+
+[3] Pippi: https://github.com/luvsound/pippi
+
+[4] pylambdarest: https://github.com/MarwanDebbiche/pylambdarest
+
+[5] Fixit: https://github.com/Instagram/Fixit
+
+[6] isort: https://github.com/PyCQA/isort
+
+展开阅读全文​
+​赞同 264​
+​3 条评论
+​分享
+​收藏
+​喜欢
+​
+继续浏览内容
+
+知乎
+发现更大的世界
+打开
+
+Chrome
+继续
+华为云开发者社区
+华为云开发者社区
+​
+已认证的官方帐号
+114 人赞同了该回答
+随着人工智能时代的到来，python变得更加流行、受欢迎，功能强大、简单易学、容易入门、应用广泛等，掀起了学习热潮，现在越来越多人转行都会学习python语言。
+
+现在的python成为了炙手可热的一门语言，在如何快速入门python的同时，如何利用python更高效的开发也是程序员成长的优势。
+
+目前，Python已经拥有数不清的第三方工具包。不仅有那种大杀器似的框架、库及应用，更多的常应用的框架、库及应用。往往大家在编程中接触的更多是常应有的一些框架、库及应用。接下来，就为大家列举一下常用的框架、库及软件包。上干货：
+
+Ø 框架
+1. Django
+
+谈到Python框架，第一个想到的应该就是Django。Django作为一个Python Web应用开发框架，可以说是一个被广泛使用的全能型框架。Django的目的是为了让开发者能够快速地开发一个网站，因此它提供了很多模块。它与其他框架最大的区别就是，鲜明独特的特性，支持orm，将数据库的操作封装成为Python，对于需要适用多种数据库的应用来说是个比较好的特性。
+
+2. Flask
+
+相信大家都知道Flask是一个用Python编写的轻量级Web应用框架。Flask也被称为“microframework”，因为它使用简单的核心，用extension增加其他功能。Flask框架非常适合初学者学习。Flask框架学会以后，我们还可以考虑学习插件的使用。
+
+3. Scrapy：Python的爬虫框架
+
+现在Python爬虫技术被看作是职场人的加分技能，因此掌握Scrapy还是十分有必要的。Scrapy是一个轻量级的使用Python编写的网络爬虫框架，这也是它与其他Python框架最大的区别。因为专门用于爬取网站和获取结构数据且使用起来非常的方便，Scrapy用途广泛，可以用于数据挖掘、监测和自动化测试等等。
+
+4. Diesel
+
+Diesel是基于Greenlet的事件I/O框架，它提供一个整洁的API来编写网络客户端和服务器。它与其他Python框架最大的区别是支持TCP和UDP。
+
+5. Cubes
+
+Cubes作为一个轻量级Python OLAP框架，包含了OLAP、多维数据分析和浏览聚合数据（aggregated data）等工具。
+
+6. Pulsar
+
+Pulsar是Python的事件驱动并发框架。有了pulsar，你可以写出在不同进程或线程中运行一个或多个活动的异步服务器。
+
+7. Tornado
+
+Tornado全称是Torado Web Server，仅仅从它的名字上我们就可以知道它可以用作Web服务器，但同时它也是一个Python Web的开发框架。Tornado和现在的主流 Web 服务器框架和大多数Python框架有着明显的区别，它是非阻塞式服务器，而且速度相当快。它也是比较常被使用的Python开源框架之一。当框架能够提供的功能占比越来越小，需要实现更多的内容的时候，Tornado就是比较好的选择了。
+
+8. Requests.
+
+Kenneth Reitz写的最富盛名的http库，每个Python程序员都应该有它。
+
+9. Pillow
+
+它是PIL（Python图形库）的一个友好分支。对于用户比PIL更加友好，对于任何在图形领域工作的人是必备的库。
+
+10. SQLAlchemy
+
+一个数据库的库。对它的评价褒贬参半。是否使用的决定权在你手里。
+
+11. BeautifulSoup
+
+虽然它很慢，但这个xml和html的解析库对于新手非常有用。
+
+12. Twisted
+
+对于网络应用开发者最重要的工具。它有非常优美的api，被很多Python开发大牛使用。
+
+13. NumPy
+
+它为Python提供了很多高级的数学方法。
+
+14. SciPy
+
+既然我们提了NumPy，那就不得不提一下SciPy。这是一个Python的算法和数学工具库，它的功能把很多科学家从Ruby吸引到了Python。
+
+15. Matplotlib
+
+一个绘制数据图的库。对于数据科学家或分析师非常有用。
+
+16. Pygame
+
+哪个程序员不喜欢玩游戏和写游戏？这个库会在开发2D游戏的时候如虎添翼。
+
+17. Pyglet
+
+3D动画和游戏开发引擎。非常有名的Python版本Minecraft就是用这个引擎做的。
+
+18. pyQT
+
+Python的GUI工具。这是在给Python脚本开发用户界面时次于wxPython的选择。
+
+19. pyGtk
+
+也是Python GUI库。很有名的Bittorrent客户端就是用它做的。
+
+20. Scapy
+
+用Python写的数据包探测和分析库。
+
+21. pywin32
+
+一个提供和windows交互的方法和类的Python库。
+
+22. nltk
+
+自然语言工具包。估计大多数人不会用它，但它通用性非常高。如果你需要处理字符串的话，它是非常好的库。但它的功能远远不止如此，自己摸索一下吧。
+
+23. nose
+
+Python的测试框架。被成千上万的Python程序员使用。如果你做测试导向的开发，那么它是必不可少的。
+
+24. SymPy
+
+SymPy可以做代数评测、差异化、扩展、复数等等。它封装在一个纯Python发行版本里。
+
+25. IPython
+
+怎么称赞这个工具的功能都不为过。它把Python的提示信息做到了极致。包括完成信息、历史信息、shell功能，以及其他很多很多方面。一定要研究一下它。
+
+python框架之间的区别还是很大的，如果是入门建议选择Flask，而重量级框架首选Django。至于其他的框架都很好用，主要看大家的应用场景对Python框架有哪些具体的要求。
+
+Ø 库
+1、 Matplotlib
+
+用于创建二维图和图形的底层库，有了它的帮助，你可以构建各种不同的图标，从直方图到散点图再到费笛卡尔坐标图，它都可以与很多流行的绘图库结合使用。
+
+2、 Seaborn
+
+包含更适合处理图标的默认设置，此外还有丰富的可视化库，包含一些复杂类型，比如说时间序列、联合分布图等。
+
+3、 Plotly
+
+一个很流行的库，可以让你轻松构建复杂的图形，该软件包含用于交互式web应用程，可实现轮廓图、三元图以及三维图等效果。
+
+4、 Pydot
+
+纯Python编写的Graphviz接口，经常用于生产复杂的定向图和无向图，能够显示图形的结构，构建神经网络和基于决策树的算法时非常有效。
+
+5、 pyecharts
+
+功能非常强大，支持多达400+地图，支持JupyterNotebook、JupyterLab，可以集成Flask，Sanic，Django等主流Web框架。
+
+6、 cufflinks
+
+结合了plotly的强大功能和panda的灵活性，可以方便地进行绘图，避免了数据可视化过程中，对数据存储结构和数据类型进行复杂的麻烦。
+
+Ø 软件包
+在这里列出过去一年在 PyPI 上下载次数最多的 Python 软件包。
+
+1 Urllib3
+
+Urllib3是一个 Python 的 HTTP 客户端，它拥有 Python 标准库中缺少的许多功能：线程安全；连接池；客户端 SSL/TLS 验证；使用分段编码上传文件；用来重试请求和处理 HTTP 重定向的助手；支持 gzip 和 deflate 编码；HTTP 和 SOCKS 的代理支持
+
+2 Six
+
+six 是一个是 Python 2 和 3 的兼容性库。这个项目旨在支持可同时运行在 Python 2 和 3 上的代码库。
+
+它提供了许多可简化 Python 2 和 3 之间语法差异的函数。一个容易理解的例子是six.print_()。在 Python 3 中，打印是通过print()函数完成的，而在 Python 2 中，print后面没有括号。因此，有了six.print_()后，你就可以使用一个语句来同时支持两种语言。
+
+3 Pip
+
+大多数人都知道并且很喜欢 pip，它是 Python 的包安装器。你可以用 pip 轻松地从 Python 包索引和其他索引（例如本地镜像或带有私有软件的自定义索引）来安装软件包。
+
+4 Python-dateutil
+
+python-dateutil模块提供了对标准datetime模块的强大扩展。我的经验是，常规的Python datetime缺少哪些功能，python-dateutil就能补足那一块。
+
+你可以用这个库做很多很棒的事情。其中，我发现的一个特别有用的功能就是：模糊解析日志文件中的日期。
+
+5 Requests
+
+Requests建立在我们的 #1 库——urllib3基础上。它让 Web 请求变得非常简单。相比urllib3来说，很多人更喜欢这个包。而且使用它的最终用户可能也比urllib3更多。后者更偏底层，并且考虑到它对内部的控制级别，它一般是作为其他项目的依赖项。
+
+6 Certifi
+
+近年来，几乎所有网站都转向 SSL，你可以通过地址栏中的小锁符号来识别它。加了小锁意味着与该站点的通信是安全和加密的，能防止窃听行为。Certifi是根证书的一个精选集合，有了它，你的 Python 代码就能验证 SSL 证书的可信度。
+
+7 Idna
+
+根据其 PyPI 页面，idna提供了“对 RFC5891 中指定的应用程序中国际化域名（IDNA）协议的支持。”
+
+据悉，应用程序中的国际化域名（IDNA）是一种用来处理包含非 ASCII 字符的域名机制。但是，原始域名系统已经提供对基于非 ASCII 字符的域名支持。IDNA的核心是两个函数：ToASCII和ToUnicode。ToASCII会将国际 Unicode 域转换为 ASCII 字符串。ToUnicode则逆转该过程。
+
+8 PyYAML
+
+YAML是一种数据序列化格式。它的设计宗旨是让人类和计算机都能很容易地阅读代码——人类很容易读写它的内容，计算机也可以解析它。
+
+9 Pyasn1
+
+一个建议，除非你真的需要，否则还是敬而远之吧。但由于它用在很多地方，因此许多包都依赖这个包。
+
+10 Docutils
+
+Docutils是一个模块化系统，用来将纯文本文档处理为很多有用的格式，例如 HTML、XML 和 LaTeX 等。Docutils能读取reStructuredText格式的纯文本文档，这种格式是类似于 MarkDown 的易读标记语法。
+
+11 Chardet
+
+你可以用chardet模块来检测文件或数据流的字符集。比如说，需要分析大量随机文本时，这会很有用。但你也可以在处理远程下载的数据，但不知道用的是什么字符集时使用它。
+
+12 RSA
+
+rsa包是一个纯 Python 的 RSA 实现。它支持：加密和解密；签名和验证签名；根据 PKCS#1 1.5 版生成密钥。它既可以用作 Python 库，也能在命令行中使用。
+
+13 Jmespath
+
+在 Python 中用 JSON 非常容易，因为它在 Python 字典上的映射非常好，这是它最好的特性之一。JMESPath，发音为“James path”，使 Python 中的 JSON 更容易使用。它允许你声明性地指定如何从 JSON 文档中提取元素。
+
+14 Setuptools
+
+它是用于创建 Python 包的工具。不过，其文档很糟糕。它没有清晰描述它的用途，并且文档中包含无效链接。最好的信息源是这个站点，特别是这个创建 Python 包的指南。
+
+15 Awscli
+
+这里把 #3、#7、#17 和 #22 放在一起介绍，因为它们的关系非常密切。
+
+16 Pytz
+
+像dateutils（#5）一样，这个库可帮助你处理日期和时间。有时候，时区处理起来可能很麻烦。幸好有这样的包，可以让事情变得简单些。
+
+17 Futures
+
+从 Python 3.2 开始，python 提供current.futures模块，可帮助你实现异步执行。futures 包是该库适用于 Python 2 的 backport。它不适用于 Python3 用户，因为 Python 3 原生提供了该模块。
+
+18 Colorama
+
+使用 Colorama，你可以为终端添加一些颜色：
+
+19 Simplejson
+
+原生的json模块有什么问题，才需要这种高级替代方案呢？并没有！实际上，Python 的json就是simplejson。但是simplejson也有一些优点：它适用于更多的 Python 版本；它比 Python 更新的频率更频繁；它有用 C 编写的（可选）部分，因此速度非常快。
+
+以上就是为大家带来的一些Python常用的框架、库及软件包，在这里再为大家分享一个从基础到实战学习Python技术的内容《60+精华：从基础到实战 带你极速掌握 Python技术》，希望能对大家的日常工作有一定的帮助。
+
+展开阅读全文​
+​赞同 114​
+​添加评论
+​分享
+​收藏
+​喜欢
+​
+继续浏览内容
+
+知乎
+发现更大的世界
+打开
+
+Chrome
+继续
+查看全部 40 个回答
+广告广告
+关于作者
+Charles
+Charles
+白露未晞
+回答
+64
+文章
+59
+关注者
+11,567
+​关注他
+​发私信
+被收藏 1,214 次
+机器学习
+tom pareto 创建
+351 人关注
+码农该懂的，不是码农想学的
+德布罗意 创建
+178 人关注
+计算机应用；软件
+很浪很浪漫 创建
+3 人关注
+工作可能有关
+马振凯 创建
+3 人关注
+留着看
+Alex-金角大王 创建
+2 人关注
+相关问题
+python在不用框架的情况下如何写网站后台？ 10 个回答
+如何看待python的japronto框架每秒处理120万次请求？ 7 个回答
+用Python写爬虫，用什么方式、框架比较好？ 13 个回答
+学到什么程度才能自己写python的web框架? 7 个回答
+为什么python的各种库框架这么难安装？ 18 个回答
+相关推荐
+live
+Python 第三方库开发应用实战
+17 人读过
+​阅读
+live
+Python Django 开发实战（视频讲解版）
+190 人读过
+​阅读
+live
+Python 金融实战
+Top One
+219 人读过
+​阅读
+广告广告
+刘看山知乎指南知乎协议知乎隐私保护指引
+应用工作申请开通知乎机构号
+侵权举报网上有害信息举报专区
+京 ICP 证 110745 号
+京 ICP 备 13052560 号 - 1
+京公网安备 11010802010035 号
+互联网药品信息服务资格证书
+（京）- 非经营性 - 2017 - 0067违法和不良信息举报：010-82716601
+儿童色情信息举报专区
+证照中心
+联系我们 © 2020 知乎
+
